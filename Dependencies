@@ -1,0 +1,10 @@
+next.js
+ganache-cli
+mocha 
+solc 0.4.26
+fs-extra
+web3
+next-routes
+semantic-ui
+semantic-ui-css
+ipfs
