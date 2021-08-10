@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.2",
     "fs-extra": "^10.0.0",
     "ganache-cli": "^6.12.2",
     "ipfs": "^0.55.4",

@@ -1,0 +1,76 @@
+/* 
+
+(mycomponentname).modules.css has this name because it is required by Next js in order to import component-level stylesheets.
+
+However, I am using this as a global style sheet due to my own incorrect setup of Next js. Everything works fine, but I must import this 
+style sheet into each of my components. This is a workaround that I will not continue to do on future projects.
+
+*/
+
+.img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+.imgContainer {
+    height: 500px;
+}
+
+.imgContainer:hover {
+    cursor: pointer;
+}
+
+.cardHover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.pointCursor:hover {
+    cursor: pointer;
+}
+
+.link {
+    color: #000000
+}
+
+.link:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.noError {
+    display: none !important; 
+}
+
+.showError {
+    margin-top: -10px !important;
+    margin-bottom: 10px !important;
+    background-color: rgb(255, 214, 34) !important;
+    color:rgb(0, 0, 0) !important;
+}
+
+.imgModal {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    margin-right: -100px;
+}
+
+.content { /* This is to create a "sticky" footer effect where the footer is always at the bottom of the screen. (Footer is 200px in height) */
+    min-height: calc(100vh - 200px);
+} 
+
+.footer1 {
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+    height: 80px;
+    padding-top: 35px;
+}
+
+.footer2 {
+    background-image: linear-gradient(black,rgb(75, 75, 75));
+    height: 100px
+}
