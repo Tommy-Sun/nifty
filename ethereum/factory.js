@@ -1,7 +1,7 @@
 import web3 from './web3';
 import ArtPieceFactory from './build/ArtPieceFactory.json';
 
-const contractAddress = '0x91bFd7D1273a7B34f9284FB2F96A930866999ACD'; //If you deployed a new contract, replace the address here!
+const contractAddress = '0x4D0fa3Ee7d743e89e0a40d44df99e03168DaFAE9'; //If you deployed a new contract, replace the address here!
 
 const instance = new web3.eth.Contract(
     JSON.parse(ArtPieceFactory.interface),
