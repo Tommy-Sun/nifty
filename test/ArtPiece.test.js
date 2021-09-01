@@ -23,7 +23,7 @@ beforeEach(async () => {
         .deploy({ data: compiledFactory.bytecode })
         .send({ from: accounts[0], gas: '1000000'}); //deploy factory
 
-    await factory.methods.createArtPiece('The Monalisa', '5000000000000000000').send({
+    await factory.methods.createArtPiece('The Monalisa', '5000000000000000000', 'Leonardo Da Vinci', 'The greatest artpiece', 'Some ipfsHash').send({
         from: accounts[0], gas: '1000000'
     }); //create new factory
 
@@ -49,8 +49,8 @@ describe('ArtPieces', () => {
     });
 
     it('checks to make sure the new artpiece has the correct name', async () => {
-        const name = await artPiece.methods.name().call();
-        assert.strictEqual('The Monalisa', name); //1st argument is what we hope it is, 2nd argument is what it actually is
+        const title = await artPiece.methods.title().call();
+        assert.strictEqual('The Monalisa', title); //1st argument is what we hope it is, 2nd argument is what it actually is
     });
 
     it('checks to make sure the new artpiece has the correct price', async () => {
