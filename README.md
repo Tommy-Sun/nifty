@@ -23,7 +23,7 @@ Note: If you have Metamask as an extension of Chrome, please change your network
 Once NiFTy is open in the browser, there are a few ways to interact.
 
 ### Create a New NFT 
-Note: You must have Metamask and usable ETH on the Rinkbey Test Network to do this. Learn how to [obtain ETH from a Rinkbey Faucet]()
+Note: You must have Metamask and usable ETH on the Rinkeby Test Network to do this. Learn how to [obtain ETH from a Rinkeby Faucet](https://faucet.rinkeby.io/).
 1. Click Create New NFT or the "+" on the top right of the page.
 2. Upload your photographic file (as a jpeg, png, etc.)
 3. Fill in the required information - title, artist name, description, etc.
@@ -38,14 +38,14 @@ Lastly, you can see the detail page of any NFT by clicking on its picture. On th
 
 ### Buy an NFT
 You can buy an NFT by simply clicking on one and going to its detail page. 
-Near the bottom of the detail page, you will see the "Buy" button. Click to buy and confirm through Metamask. Will not allow if you already own the NFT.
+Near the bottom of the detail page, you will see the "Buy" button. Click to buy and confirm through Metamask. Will not allow if you already own the NFT or if you do not have the funds to purchase it.
 
 ### Change the Price of an NFT
 If you are the owner of the NFT, you can change its price. Go to either the detail page of the NFT or navigate to your owner's page. There, you will see an icon next to the price. Clicking it will pop up a modal for inputting a new price. After inputting, click "Submit" and confirm in Metamask.
 
 ## Tests
-Tests on the solidity code are included in the Nifty/test folder.
-Tests were done using the Mocha, a JavaScript test framework. Ganache-cli is used for a local web3 "provider" in our tests. Ganache provides 10 local ethereum accounts with 100 ETH each for testing.   
+Tests on the solidity code are included in the [test file](test/ArtPiece.test.js).
+Tests were done using Mocha, a JavaScript test framework. Ganache-cli is used for a local web3 "provider" in our tests. Ganache provides 10 local ethereum accounts with 100 ETH each for testing.   
 ### To Test
 1. In the terminal, navigate to the root of the project (cd "/path/to/nifty-master") 
 2. Run "npm run test" in the terminal. The 5 tests should pass. 
