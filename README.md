@@ -1,5 +1,5 @@
 # NiFTy 
-A Non-Fungible Token (NFT) marketplace. Checkout it out live at [https://nifty-three.vercel.app/](https://nifty-three.vercel.app/)
+A Non-Fungible Token (NFT) marketplace. Checkout it out live at [https://nifty-three.vercel.app/](https://nifty-three.vercel.app/) (Not yet mobile friendly)
 
 ## Description
 This is a decentralized platform in which users can upload, buy, and sell visual-based NFT's as pieces of art. The Smart Contract is also included in the project and, if interested, may be deployed with the instructions in the deploy.js file. 
