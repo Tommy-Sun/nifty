@@ -35,6 +35,11 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                                             (
                                                 <img
                                                 className={styles.img} 
+                                                onLoad={() => {
+                                                    var shallowCopy = [...this.state.loading];
+                                                    shallowCopy[index] = true
+                                                    this.setState({ loading: shallowCopy })}
+                                                } 
                                                 src={`https://ipfs.io/ipfs/${ipfsHash}`}
                                                 />
                                             ) : 
@@ -97,8 +102,7 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
 export default ArtPieceCards;
 
 /* Note to self: for dynamic routing you must use backticks `` then ${} */
-/*
-<img
+/*<img
 className={styles.img} 
 onLoad={() => {
     var shallowCopy = [...this.state.loading];
@@ -107,4 +111,3 @@ onLoad={() => {
 } 
 src={`https://ipfs.io/ipfs/${ipfsHash}`}
 />
-*/

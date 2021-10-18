@@ -32,18 +32,23 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                                     </Header>
                                     <Container className={styles.imgContainer}>
                                         {<img className={styles.img} src={`https://ipfs.io/ipfs/${ipfsHash}`} /> ? 
-                                            (
-                                                <img
-                                                className={styles.img} 
-                                                src={`https://ipfs.io/ipfs/${ipfsHash}`}
-                                                />
-                                            ) : 
-                                            (
-                                                <Placeholder className={styles.imgContainer}>
-                                                    <Placeholder.Image />
-                                                </Placeholder>
-                                            )
-                                        }
+                                                    (
+                                                        <img
+                                                        className={styles.img} 
+                                                        onLoad={() => {
+                                                            var shallowCopy = [...this.state.loading];
+                                                            shallowCopy[index] = true
+                                                            this.setState({ loading: shallowCopy })}
+                                                        } 
+                                                        src={`https://ipfs.io/ipfs/${ipfsHash}`}
+                                                        />
+                                                    ) : 
+                                                    (
+                                                        <Placeholder className={styles.imgContainer}>
+                                                            <Placeholder.Image />
+                                                        </Placeholder>
+                                                    )
+                                                }
                                     </Container>
                                 </Container>
                             </Link>
@@ -97,14 +102,4 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
 export default ArtPieceCards;
 
 /* Note to self: for dynamic routing you must use backticks `` then ${} */
-/*
-<img
-className={styles.img} 
-onLoad={() => {
-    var shallowCopy = [...this.state.loading];
-    shallowCopy[index] = true
-    this.setState({ loading: shallowCopy })}
-} 
-src={`https://ipfs.io/ipfs/${ipfsHash}`}
-/>
-*/
+//{<img className={styles.img} src={`https://ipfs.io/ipfs/${ipfsHash}`} /> ? (<PlaceholderImage />) : (<img className={styles.img} src={`https://ipfs.io/ipfs/${ipfsHash}`} />) }

@@ -35,6 +35,11 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                                             (
                                                 <img
                                                 className={styles.img} 
+                                                onLoad={() => {
+                                                    var shallowCopy = [...this.state.loading];
+                                                    shallowCopy[index] = true
+                                                    this.setState({ loading: shallowCopy })}
+                                                } 
                                                 src={`https://ipfs.io/ipfs/${ipfsHash}`}
                                                 />
                                             ) : 
