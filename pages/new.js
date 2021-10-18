@@ -39,7 +39,7 @@ class NewNFT extends Component {
     isFloat(n) {
         return parseFloat(n.match(/^-?\d*(\.\d+)?$/))>0;
     }
-    // ^This function returns true of false depending on whether the input is a float or not.
+    // ^This function returns true or false depending on whether the input is a float or not.
 
     captureFile = (event) => {
         console.log('this capture button is working.');
