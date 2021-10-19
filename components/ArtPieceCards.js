@@ -6,12 +6,13 @@ import { Link } from '../routes';
 import styles from '../styles/Home.module.css';
 import ChangePriceIcon from './ChangePriceIcon';
 
+
 const ArtPieceCards = React.forwardRef((props, ref) => {
 
     //Props passed to this component are artPieceSummaries and artPiecesAddresses.
 
     return (
-        <Card.Group style={{ marginTop: '10px' }} itemsPerRow={3}>
+        <Card.Group style={{ marginTop: '10px' }} itemsPerRow={3} stackable>
             {props.artPieceSummaries.map((art, index) => 
                 {
                     const title = art[0];
@@ -19,9 +20,7 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                     const owner = art[2];
                     const artist = art[3];
                     const address = props.artPiecesAddresses[index];
-                    const ipfsHash = art[5];
-
-
+                    const ipfsHash = art[5]; 
 
                     return (
                         <Card key={index} className={styles.cardHover}>
@@ -69,7 +68,7 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                                             <Link route={`/owner/${owner}`} passHref>
                                                 <div className={styles.link}>
                                                     <h4>Owner:</h4>
-                                                    <p>{MaxStringCharacters(owner, 18)}</p>
+                                                    <p>{MaxStringCharacters(owner, 10)}</p>
                                                 </div>
                                             </Link>
                                         </Grid.Column>
@@ -77,7 +76,7 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
                                             <Link route={`/artist/${artist}`} passHref>
                                                 <div className={styles.link}>
                                                     <h4>Artist:</h4>
-                                                    <p>{MaxStringCharacters(artist, 18)}</p>
+                                                    <p>{MaxStringCharacters(artist, 16)}</p>
                                                 </div>
                                             </Link>
                                         </Grid.Column>
@@ -91,8 +90,7 @@ const ArtPieceCards = React.forwardRef((props, ref) => {
             }
         </Card.Group>
     ) 
-}
-)
+})
 
 export default ArtPieceCards;
 
