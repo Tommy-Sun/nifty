@@ -60,7 +60,7 @@ class BuyingPage extends Component {
         return (
             <Layout>
                 <Container>
-                    <Grid padded='horizontally'>
+                    <Grid padded='horizontally' stackable>
                         <Row>
                             <Modal
                                 style={{ width: 'auto'}}
